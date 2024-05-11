@@ -1,0 +1,163 @@
+Hi Anil:
+
+Site URL: http://techrevolute.com/demo/rbgroup/api/
+
+For API i am going to create a separate class file 
+1. Mlocation
+
+State API:
+
+GET API: http://techrevolute.com/demo/rbgroup/api/mlocation/state
+
+If you need to get only one state then pass the id in last like
+GET API: http://techrevolute.com/demo/rbgroup/api/mlocation/state/1
+
+City API:
+
+GET API: http://techrevolute.com/demo/rbgroup/api/mlocation/city
+
+If you need to get only city for perticular state then pass the state id in last like
+GET API: http://techrevolute.com/demo/rbgroup/api/mlocation/city/1
+
+Area API:
+
+GET API: http://techrevolute.com/demo/rbgroup/api/mlocation/areas
+
+If you need to get only areas for perticular city then pass the city id in last like
+GET API: http://techrevolute.com/demo/rbgroup/api/mlocation/areas/9
+
+
+2. Mproperty
+
+Category API:
+
+GET API: http://techrevolute.com/demo/rbgroup/api/mproperty/category
+
+If you need to get sub category for the main category means please pass category id at last
+GET API: http://techrevolute.com/demo/rbgroup/api/mproperty/category/1
+
+Property Type API:
+
+GET API: http://techrevolute.com/demo/rbgroup/api/mproperty/propertytype
+
+Property Status API:
+
+GET API: http://techrevolute.com/demo/rbgroup/api/mproperty/propertystatus
+
+Property Age API:
+
+GET API: http://techrevolute.com/demo/rbgroup/api/mproperty/propertyage
+
+Category List API:
+
+GET API: http://techrevolute.com/demo/rbgroup/api/mproperty/categorylist
+
+Property List API:
+
+POST API: http://techrevolute.com/demo/rbgroup/api/mproperty/propertylist
+Request:
+{
+"itemType":"", /*(buy,rent,lease,projects)*/
+"itemSize":"12",
+"pageNo":"1"
+}
+
+Property Ads API:
+
+GET API: http://techrevolute.com/demo/rbgroup/api/mproperty/propertyads
+if you need to get the property ads of perticular type like (buy,rent,lease,projects) you can pass this at last
+
+example: http://techrevolute.com/demo/rbgroup/api/mproperty/propertyads/buy
+
+Related Property List API:
+
+POST API: http://techrevolute.com/demo/rbgroup/api/mproperty/otherproperty
+Request:
+{
+"itemType":"", /*(buy,rent,lease,projects)*/
+"itemSize":"12",
+"pageNo":"1"
+}
+
+Main search Property List API: POST
+
+POST API: http://techrevolute.com/demo/rbgroup/api/mproperty/mainsearch
+Request:
+{
+	"cityname":"",
+	"propertytype":"",
+	"category":""
+}
+
+Property Overview API
+
+GET API: http://techrevolute.com/demo/rbgroup/api/mproperty/overview/T352864
+Here T352864 is an product SKU 
+
+Featured Property List API:
+
+POST API: http://techrevolute.com/demo/rbgroup/api/mproperty/featuredpropertylist
+Request:
+{
+"itemSize":"12",
+"pageNo":"1"
+}
+
+Premium Property List API:
+
+POST API: http://techrevolute.com/demo/rbgroup/api/mproperty/premiumpropertylist
+Request:
+{
+"itemSize":"12",
+"pageNo":"1"
+}
+
+3. Mrbgroup
+
+Send OTP API:
+
+POST API: http://techrevolute.com/demo/rbgroup/api/mrbgroup/sendotp
+
+Request: number, emailId, otp
+
+Register API:
+
+POST API: http://techrevolute.com/demo/rbgroup/api/mrbgroup/register
+
+Request: email, number, fname, lname, dob, gender, state, city, password, usertype
+
+Login API:
+
+POST API: http://techrevolute.com/demo/rbgroup/api/mrbgroup/login
+
+Request: userName, password
+
+Change Password API:
+
+POST API: http://techrevolute.com/demo/rbgroup/api/mrbgroup/changepassword
+
+Request: userid, password, newpassword
+
+Forgot Password API:
+
+POST API: http://techrevolute.com/demo/rbgroup/api/mrbgroup/forgotpassword
+
+Request: emailid
+
+Get RBConsultant API:
+
+GET API: http://techrevolute.com/demo/rbgroup/api/mrbgroup/getRBConsultant
+
+
+4. Mcontent.
+
+Dynamic content API:
+About Us
+Privacy Policy
+Tearms and Condition
+
+GET API: http://techrevolute.com/demo/rbgroup/api/mcontent/cmscontent
+
+Contact Us API:
+
+GET API: http://techrevolute.com/demo/rbgroup/api/mcontent/contactus
